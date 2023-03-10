@@ -123,9 +123,8 @@ if (!isset($_SERVER['REQUEST_URI']) || $_SERVER['REQUEST_URI'] == '' || $_SERVER
             case 'portfolio':
                 $metas = null;
                 if (isset($paths[2])) {
-                    $url = "https://api.heinsoe.com/portfolio/" . $paths[2];
-                    $data = myFetcher($url, []);
-                    // print_r(myFetcher($url,[]));
+                    $url = "https://api.heinsoe.com/portfolio/" . $paths[2]."/";
+                    $data = myFetcher('$url', []);
                     if (isset($data['title'])) {
                         $val = array(
                             "lang" => "en-us",
